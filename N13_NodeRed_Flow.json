@@ -1,0 +1,1068 @@
+[
+    {
+        "id": "1983da727d80dc82",
+        "type": "tab",
+        "label": "Flow Nhóm 13 - Đồ án cuối kì",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ab1e49ed0302b9d0",
+        "type": "mqtt in",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "topic": "n13/temp",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6528f313e462a1e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "377dfcc25aacc794",
+                "4557d4b88e476393",
+                "b82ae91c3d3314a5",
+                "ad10b300800af269"
+            ]
+        ]
+    },
+    {
+        "id": "377dfcc25aacc794",
+        "type": "ui_gauge",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "group": "ef5b7972e9197296",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Nhiệt độ",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-40",
+        "max": "80",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 380,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "dac6b90434cd670f",
+        "type": "mqtt out",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "topic": "n13/led",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6528f313e462a1e7",
+        "x": 340,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "105de6f93faafb5d",
+        "type": "ui_switch",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "label": "Led",
+        "tooltip": "",
+        "group": "7a0fc402340361a0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "Đèn",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on_led",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off_led",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 110,
+        "y": 700,
+        "wires": [
+            [
+                "dac6b90434cd670f",
+                "4557d4b88e476393"
+            ]
+        ]
+    },
+    {
+        "id": "f9d4dcb6e8663f1e",
+        "type": "mqtt in",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "topic": "n13/humi",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6528f313e462a1e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 300,
+        "wires": [
+            [
+                "057a217b991baf33",
+                "4557d4b88e476393",
+                "ccacb03e2c17c1be",
+                "46757c9d63edd172"
+            ]
+        ]
+    },
+    {
+        "id": "057a217b991baf33",
+        "type": "ui_gauge",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "group": "ef5b7972e9197296",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Độ ẩm",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 330,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ae32ed53f852eee3",
+        "type": "mqtt in",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "topic": "n13/move",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6528f313e462a1e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 420,
+        "wires": [
+            [
+                "e58a457f8d52b109",
+                "4557d4b88e476393",
+                "36b15448ade5fe06",
+                "2e4f5f190d79849b"
+            ]
+        ]
+    },
+    {
+        "id": "74a426a3b574470a",
+        "type": "mqtt in",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "topic": "n13/light",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6528f313e462a1e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 600,
+        "wires": [
+            [
+                "2ccf33030c2e3b03",
+                "4557d4b88e476393",
+                "ff1840dbc8cde82f",
+                "b88ec9832bcf78e4"
+            ]
+        ]
+    },
+    {
+        "id": "e58a457f8d52b109",
+        "type": "ui_gauge",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "group": "ef5b7972e9197296",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Chuyển động",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 310,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "2ccf33030c2e3b03",
+        "type": "ui_gauge",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "group": "ef5b7972e9197296",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Độ sáng",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 300,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5063ca8c1453dbf4",
+        "type": "ui_switch",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "label": "Loa",
+        "tooltip": "",
+        "group": "7a0fc402340361a0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "Loa",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on_loa",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off_loa",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 110,
+        "y": 760,
+        "wires": [
+            [
+                "b2da7ef70ff82ab9",
+                "4557d4b88e476393"
+            ]
+        ]
+    },
+    {
+        "id": "34c535994edf710d",
+        "type": "ui_switch",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "label": "Bơm nước",
+        "tooltip": "",
+        "group": "7a0fc402340361a0",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "Bơm nước",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on_bom_nuoc",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off_bom_nuoc",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 130,
+        "y": 840,
+        "wires": [
+            [
+                "af0b754b748b92e4",
+                "4557d4b88e476393"
+            ]
+        ]
+    },
+    {
+        "id": "5f850ad697324b43",
+        "type": "ui_switch",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "label": "Quạt",
+        "tooltip": "",
+        "group": "7a0fc402340361a0",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "Quạt",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on_quat",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off_quat",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 110,
+        "y": 920,
+        "wires": [
+            [
+                "20f77338bad0b0c5",
+                "4557d4b88e476393"
+            ]
+        ]
+    },
+    {
+        "id": "b2da7ef70ff82ab9",
+        "type": "mqtt out",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "topic": "n13/loa",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6528f313e462a1e7",
+        "x": 360,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "af0b754b748b92e4",
+        "type": "mqtt out",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "topic": "n13/bom_nuoc",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6528f313e462a1e7",
+        "x": 380,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "20f77338bad0b0c5",
+        "type": "mqtt out",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "topic": "n13/quat",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6528f313e462a1e7",
+        "x": 340,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "ef77245b2209f05c",
+        "type": "ui_form",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "label": "",
+        "group": "241adbbdef4cad64",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "",
+                "value": "username",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "",
+                "value": "password",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "username": "",
+            "password": ""
+        },
+        "payload": "",
+        "submit": "Login",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 170,
+        "y": 1340,
+        "wires": [
+            [
+                "749de6838326c845"
+            ]
+        ]
+    },
+    {
+        "id": "3ca70871bf881be6",
+        "type": "ui_toast",
+        "z": "1983da727d80dc82",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Login success",
+        "name": "",
+        "x": 750,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "749de6838326c845",
+        "type": "function",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "func": "name = msg.payload.username;\npass = msg.payload.password;\nif (name == \"Admin\" && pass == \"Admin\")\n    msg.payload = \"yes\";\nelse\n    msg.payload = \"no\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 1340,
+        "wires": [
+            [
+                "6642a5e6a291776a"
+            ]
+        ]
+    },
+    {
+        "id": "6642a5e6a291776a",
+        "type": "switch",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "yes",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "no",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 530,
+        "y": 1340,
+        "wires": [
+            [
+                "3ca70871bf881be6",
+                "8a190ea41c25d934"
+            ],
+            [
+                "34ef70eb7b84d463"
+            ]
+        ]
+    },
+    {
+        "id": "34ef70eb7b84d463",
+        "type": "ui_toast",
+        "z": "1983da727d80dc82",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Login fail",
+        "name": "",
+        "x": 750,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "62b4924d13739bbc",
+        "type": "ui_ui_control",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "events": "connect",
+        "x": 540,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c2d3f341ccc804a",
+        "type": "function",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "func": "msg.payload = {group: {\n    show: [\"Đồ_án_cuối_kì_Login\"],\n    hide: [\"Đồ_án_cuối_kì_Nhóm_13\", \"Đồ_án_cuối_kì_User_control\"]\n}};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 1480,
+        "wires": [
+            [
+                "62b4924d13739bbc"
+            ]
+        ]
+    },
+    {
+        "id": "5cc3bf87c26f4ee6",
+        "type": "ui_ui_control",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "events": "connect",
+        "x": 940,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a190ea41c25d934",
+        "type": "function",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "func": "msg.payload = {group: {\n    show: [\"Đồ_án_cuối_kì_Nhóm_13\"],\n    hide: [\"Đồ_án_cuối_kì_Login\", \"Đồ_án_cuối_kì_User_control\"]\n}};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1240,
+        "wires": [
+            [
+                "5cc3bf87c26f4ee6"
+            ]
+        ]
+    },
+    {
+        "id": "f84fb0ade7596809",
+        "type": "ui_button",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "group": "ef5b7972e9197296",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 1480,
+        "wires": [
+            [
+                "2c2d3f341ccc804a"
+            ]
+        ]
+    },
+    {
+        "id": "4557d4b88e476393",
+        "type": "function",
+        "z": "1983da727d80dc82",
+        "name": "Push event log to array",
+        "func": "var dashboardLog = flow.get('dashboardLog') || [];\n\ndashboardLog.push(msg);\nif (dashboardLog.length > 20) {\n    dashboardLog.shift();\n    dashboardLog.length = 20;\n}\n\nflow.set('dashboardLog', dashboardLog);\nmsg = {};\nmsg.payload = dashboardLog;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 480,
+        "wires": [
+            [
+                "ad7f4d6c5f09c6e6"
+            ]
+        ]
+    },
+    {
+        "id": "ad7f4d6c5f09c6e6",
+        "type": "ui_template",
+        "z": "1983da727d80dc82",
+        "group": "ef5b7972e9197296",
+        "name": "Logs",
+        "order": 13,
+        "width": "6",
+        "height": "10",
+        "format": "<ul>\n <li ng-repeat=\"x in msg.payload\">\n <font color=\"red\">{{x.topic}}</font>\n    <ul>\n        <li>{{x.payload}}</li>\n    </ul>\n </li>\n</ul>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1070,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b82ae91c3d3314a5",
+        "type": "ui_text",
+        "z": "1983da727d80dc82",
+        "group": "ef5b7972e9197296",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Nhiệt độ:",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 400,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "ccacb03e2c17c1be",
+        "type": "ui_text",
+        "z": "1983da727d80dc82",
+        "group": "ef5b7972e9197296",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Độ ẩm",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 310,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "36b15448ade5fe06",
+        "type": "ui_text",
+        "z": "1983da727d80dc82",
+        "group": "ef5b7972e9197296",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Chuyển động",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 310,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ff1840dbc8cde82f",
+        "type": "ui_text",
+        "z": "1983da727d80dc82",
+        "group": "ef5b7972e9197296",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Độ sáng",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 340,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "c059b71881b821cc",
+        "type": "ui_switch",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "label": "User_control",
+        "tooltip": "",
+        "group": "ef5b7972e9197296",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 190,
+        "y": 1140,
+        "wires": [
+            [
+                "627f0f049fe6ca6a",
+                "aa4ae6f1d908f383"
+            ]
+        ]
+    },
+    {
+        "id": "aa7b5e45543025ae",
+        "type": "ui_ui_control",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "events": "connect",
+        "x": 740,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bdee467110f34ca3",
+        "type": "function",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "func": "msg.payload = {group: {\n    show: [\"Đồ_án_cuối_kì_Nhóm_13\", \"Đồ_án_cuối_kì_User_control\"],\n    hide: [\"Đồ_án_cuối_kì_Login\"]\n}};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1100,
+        "wires": [
+            [
+                "aa7b5e45543025ae"
+            ]
+        ]
+    },
+    {
+        "id": "627f0f049fe6ca6a",
+        "type": "switch",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "false",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 370,
+        "y": 1140,
+        "wires": [
+            [
+                "bdee467110f34ca3"
+            ],
+            [
+                "9ef128eba67eb1ac"
+            ]
+        ]
+    },
+    {
+        "id": "9ef128eba67eb1ac",
+        "type": "function",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "func": "msg.payload = {group: {\n    show: [\"Đồ_án_cuối_kì_Nhóm_13\"],\n    hide: [\"Đồ_án_cuối_kì_Login\", \"Đồ_án_cuối_kì_User_control\"]\n}};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1200,
+        "wires": [
+            [
+                "aa7b5e45543025ae"
+            ]
+        ]
+    },
+    {
+        "id": "aa4ae6f1d908f383",
+        "type": "mqtt out",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "topic": "n13/user_control",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6528f313e462a1e7",
+        "x": 330,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "ad10b300800af269",
+        "type": "http request",
+        "z": "1983da727d80dc82",
+        "name": "Request temp",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/update?api_key=P5K844UJQKYFDAJU&field1={{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 360,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "46757c9d63edd172",
+        "type": "http request",
+        "z": "1983da727d80dc82",
+        "name": "Request Humi",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/update?api_key=P5K844UJQKYFDAJU&field2={{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 320,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b88ec9832bcf78e4",
+        "type": "http request",
+        "z": "1983da727d80dc82",
+        "name": "Request Brightless",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/update?api_key=P5K844UJQKYFDAJU&field3={{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 330,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c74e1df843c5d5c",
+        "type": "http request",
+        "z": "1983da727d80dc82",
+        "name": "Request IFTTT",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://maker.ifttt.com/trigger/Vwan/with/key/ld1AFcNCUF7IdBi40hyzOE6BT0uoQupa43tAzZV7c1q?value1={{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 460,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2e4f5f190d79849b",
+        "type": "switch",
+        "z": "1983da727d80dc82",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 290,
+        "y": 480,
+        "wires": [
+            [
+                "9c74e1df843c5d5c"
+            ]
+        ]
+    },
+    {
+        "id": "6528f313e462a1e7",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.mqtt-dashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ef5b7972e9197296",
+        "type": "ui_group",
+        "name": "Nhóm_13",
+        "tab": "ac36893841a61903",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7a0fc402340361a0",
+        "type": "ui_group",
+        "name": "User_control",
+        "tab": "ac36893841a61903",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "241adbbdef4cad64",
+        "type": "ui_group",
+        "name": "Login",
+        "tab": "ac36893841a61903",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ac36893841a61903",
+        "type": "ui_tab",
+        "name": "Đồ_án_cuối_kì",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
